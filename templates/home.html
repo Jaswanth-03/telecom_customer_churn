@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>credit_card_score</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+    <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">telecom_customer_churn</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <div class="container">
+
+        <form action="\predict" method="post">
+
+            <h5> gender</h5>
+            <select name="gender" id="gender" required="required">
+                                <option value="1">male</option>
+                                <option value="0">female</option>
+            </select>
+
+            <br>
+
+            <h5> SeniorCitizen</h5>
+            <select name="SeniorCitizen" id="SeniorCitizen" required="required">
+                                <option value="1">yes</option>
+                                <option value="0">no</option>
+            </select>
+
+            <br>
+            <h5> Partner</h5>
+            <select name="Partner" id="Partner" required="required">
+                                <option value="1">yes</option>
+                                <option value="0">no</option>
+            </select>
+
+            <br>
+
+            <h5> Dependents</h5>
+            <select name="Dependents" id="Dependents" required="required">
+                                <option value="1">yes</option>
+                                <option value="0">no</option>
+            </select>
+
+            <br>
+
+            <h5> tenure(in months)</h5>
+            <input type="number" name="tenure" id="tenure" required="required">
+
+            <br>
+
+            <h5> PhoneService</h5>
+            <select name="PhoneService" id="PhoneService" required="required">
+                                <option value="1">yes</option>
+                                <option value="0">no</option>
+            </select>
+
+            <br>
+
+            <h5> MultipleLines</h5>
+            <select name="MultipleLines" id="MultipleLines" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="No phone service">No phone service</option>
+            </select>
+
+            <br>
+
+            <h5> InternetService</h5>
+            <select name="InternetService" id="InternetService" required="required">
+                                <option value="DSL">DSL</option>
+                                <option value="fibre optic">fibre optic</option>
+                                <option value="no">no</option>
+            </select>
+
+            <br>
+
+            <h5> OnlineSecurity</h5>
+            <select name="OnlineSecurity" id="OnlineSecurity" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="no InternetService">no InternetService</option>
+            </select>
+
+            <br>
+            <h5> OnlineBackup</h5>
+            <select name="OnlineBackup" id="OnlineBackup" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="no InternetService">no InternetService</option>
+            </select>
+            <br>
+
+            <h5> DeviceProtection</h5>
+            <select name="DeviceProtection" id="DeviceProtection" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="no InternetService">no InternetService</option>
+            </select>
+            <br>
+
+            <h5> TechSupport</h5>
+            <select name="TechSupport" id="TechSupport" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="no InternetService">no InternetService</option>
+            </select>
+            <br>
+
+            <h5> StreamingTV</h5>
+            <select name="StreamingTV" id="StreamingTV" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="no InternetService">no InternetService</option>
+            </select>
+            <br>
+
+            <h5> StreamingMovies</h5>
+            <select name="StreamingMovies" id="StreamingMovies" required="required">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                                <option value="no InternetService">no InternetService</option>
+            </select>
+            <br>
+
+            <h5> Contract</h5>
+            <select name="Contract" id="Contract" required="required">
+                                <option value="Month-to-month">Month-to-month</option>
+                                <option value="One year">One year</option>
+                                <option value="Two year">Two year</option>
+            </select>
+            <br>
+
+            <h5> PaperlessBilling</h5>
+            <select name="PaperlessBilling" id="PaperlessBilling" required="required">
+                                <option value="1">yes</option>
+                                <option value="0">no</option>
+            </select>
+            <br>
+
+            <h5 class="card-title">PaymentMethod</h5>
+            <select name="PaymentMethod" id="PaymentMethod" required="required">
+                                <option value="Electronic check">Electronic check</option>
+                                <option value="Mailed check">Mailed check</option>
+                                <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                                <option value="Credit card (automatic)">Credit card (automatic)</option>
+            </select>
+            <br>
+
+            <h5> MonthlyCharges</h5>
+            <input type="number" step="any" name="MonthlyCharges" id="MonthlyCharges" required="required">
+            <br>
+
+            <h5> TotalCharges</h5>
+            <input type="number" step="any" name="TotalCharges" id="TotalCharges" required="required">
+            <br>
+
+
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
